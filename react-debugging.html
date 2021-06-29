@@ -5,7 +5,8 @@
 
 <!-- To see this component, drag the file tab into the browser. -->
 
-<!-- HINT: Check the console in the browser developer tools for errors. The lines numbers may not match up with the line numbers in your text editor. -->
+<!-- HINT: Check the consol
+  e in the browser developer tools for errors. The lines numbers may not match up with the line numbers in your text editor. -->
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -56,6 +57,8 @@
               <Card
                 drawCard={ this.drawCard }
                 shuffle={ this.shuffle }
+                hand= { this.state.hand }
+                //hand needs to be passed through the component
               />
             </>
           )
@@ -80,10 +83,11 @@
           }
           return(
             <>
-              <button onClick={ }>
+              <button onClick={ this.props.drawCard }>
+                //need to add props here
                 Click to Draw a Card
               </button>
-              <button onClick={ shuffle }>
+              <button onClick={ this.props.shuffle }>
                 Return Cards and Shuffle Deck
               </button>
               <div style={ handStyles }>
